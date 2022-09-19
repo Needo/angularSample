@@ -1,0 +1,27 @@
+<ng-container >
+  <mat-toolbar class="example-header flex-row mat-toolbar" >  
+    <div class="app-title-bar">LOREM | PSUM </div>      
+    <span class="example-spacer"></span>    
+    <button mat-icon-button class="example-icon" style="text-align:center;" >
+      <mat-icon matBadge="5">notifications</mat-icon>        
+    </button>    
+      <button mat-mini-fab>AP</button>         
+  </mat-toolbar> 
+  <hr>
+  <mat-sidenav-container class="example-container mat-drawer-container" style="border:1px ;">
+    <mat-sidenav #sidenav mode="side" opened class="example-sidenav" [fixedInViewport]="true" [fixedTopGap]="60" [fixedBottomGap]="0">
+                 <ul>
+                  <li *ngFor="let item of MenuItems; let i = index" [ngClass]="{'active': activeRouteId ==  i}">
+                    <a mat-button [routerLink]="item.routerLink" (click)="activeRouteClick(i)" >
+                      <span class="material-icons blue-color">{{item.icon}}</span>
+                      <span style="padding-left:10px ;">{{item.Label}}</span>
+                    </a>                                     
+                  </li>
+                 </ul>
+    </mat-sidenav>
+    <mat-sidenav-content >      
+      <router-outlet></router-outlet> 
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>
+

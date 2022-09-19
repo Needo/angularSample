@@ -1,0 +1,79 @@
+.app-title-bar
+{
+color: #797979;
+font-size: large;
+font-weight: 100pt;
+}
+.example-container {
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+.example-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  background-color: white !important;
+  color: steelblue;
+
+  ul {
+    list-style: none;
+    padding-left: 5px;
+    padding-right: 5px
+  }
+
+  span icon {
+    padding-left: 0px !important;
+    padding-top: 10px !important;
+  }
+
+  mat-button {
+    width: 200px;    
+  }
+
+  li {
+    padding-left: 5px;
+    align-content: flex-start;
+    width: 200px;
+    list-style: none;
+    activeItem {
+      color: red;
+    }
+  }
+}
+
+.example-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-icon {
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+.mat-drawer-container
+{
+  background-color: #f0f5fb !important;
+}
+.mat-toolbar
+{
+  color: black;
+  background-color: white;
+}

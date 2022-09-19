@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="well well-md summary">
+        <div class="well summary" style="margin-bottom: 5px;">
+            <span class="material-icons blue-color">{{SelectedMenuItem.icon}}</span> {{SelectedMenuItem.Label}}
+        </div>
+        <div class="well  summary " style="margin-bottom: 5px;">
+            <strong>Home Page Description</strong>
+        </div>
+    </div>
+    <div id="products" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4" *ngFor="let item of SummaryItems">
+            <div class="thumbnail summaryItem">
+                <div>
+                    <div class="caption">
+                        <p style="text-align:right"><span class="material-icons color_blue"><mat-icon  [inline]="true">{{item.Icon}}</mat-icon></span></p>
+                        <p class="group inner list-group-item-text summaryItemTotal"> {{item.Total}}</p>
+                        <p class="group inner list-group-item-text summaryItemCaption"> {{item.Caption}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-blog></app-blog>
+</div>

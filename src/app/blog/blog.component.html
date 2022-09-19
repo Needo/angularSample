@@ -1,0 +1,19 @@
+
+<div class="container">
+    <div class="well well-md summary"> 
+        <span class="material-icons blue-color">{{SelectedMenuItem.icon}}</span> Recent Blogs
+    </div>
+    <div id="products" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4" *ngFor="let post of BlogPosts">
+            <img style="text-align:left;" src="/assets/images/scene.jpg" width="200" height="150px" alt="" />
+            <div class="thumbnail summaryItem">
+                <div>
+                    <div class="caption">                        
+                        <p class="title-text"> {{post.title}}</p>
+                        <p  class="post-text"> {{post.body}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="well well-md summary">
+
+    <div class="well summary" style="margin-bottom: 5px;">            
+      <span class="material-icons blue-color">{{SelectedMenuItem.icon}}</span> {{SelectedMenuItem.Label}}      
+      <div class="btn-group pull-right">
+          <a href="#" (click)="listView($event)" id="list" ><span><mat-icon>list</mat-icon></span></a>               
+          <a href="#" (click)="gridView($event)" id="grid" > <span><mat-icon>grid_on</mat-icon></span></a>              
+      </div>
+    </div>
+      <div class="well  summary " style="margin-bottom: 5px;">      
+      <strong>Total Users: {{allUsers.length}}</strong>      
+    </div>
+  </div>
+  <div id="products" class="row list-group">
+      <div class="item  col-xs-4 col-lg-4" *ngFor="let user of allUsers">
+          <div class="thumbnail">
+              <img class="group list-group-image clip-circle" src="/assets/images/sample.jpg" width="400" height="150px" alt="" />
+              <div class="caption">
+                  <h4 class="group inner list-group-item-heading">{{user.username}}</h4>                                    
+                  <p class="group inner list-group-item-text"> {{user.name}}</p>
+                  <p class="group inner list-group-item-text"> {{user.email}}</p>                  
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
